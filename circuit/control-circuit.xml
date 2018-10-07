@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/kaustubh/filament-dry-box/circuit/control-circuit.sch</source>
+    <date>Sat Jul 28 21:12:44 2018</date>
+    <tool>Eeschema 4.0.5+dfsg1-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>control-circuit.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="XA1">
+      <value>Arduino_Nano_Socket</value>
+      <footprint>Arduino:Arduino_Nano_Socket</footprint>
+      <libsource lib="arduino" part="Arduino_Nano_Socket"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B41CCC0</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>R</value>
+      <footprint>Resistors_THT:Resistor_Horizontal_RM10mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C6BBE</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_01X03</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x03</footprint>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C6C97</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>Q_NMOS_GDS</value>
+      <footprint>TO_SOT_Packages_THT:TO-220_Neutral123_Vertical_LargePads</footprint>
+      <libsource lib="device" part="Q_NMOS_GDS"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C7049</tstamp>
+    </comp>
+    <comp ref="DS1">
+      <value>LCD16X2</value>
+      <footprint>Displays:WC1602A</footprint>
+      <libsource lib="display" part="LCD16X2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C73D2</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>POT_TRIM</value>
+      <footprint>Potentiometers:Potentiometer_Trimmer-EVM3E</footprint>
+      <libsource lib="device" part="POT_TRIM"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C751D</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_01X02</value>
+      <footprint>TerminalBlock_RND:TerminalBlock_RND_205-00232_Pitch5.08mm</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C894E</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>CONN_01X02</value>
+      <footprint>TerminalBlock_RND:TerminalBlock_RND_205-00232_Pitch5.08mm</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C9307</tstamp>
+    </comp>
+    <comp ref="ENC1">
+      <value>ALPS-STEC12E08</value>
+      <footprint>Rotary-Encoders:ALPS_STEC12E08</footprint>
+      <libsource lib="Rotary-Encoders" part="ALPS-STEC12E08"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B5C8CD7</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Rotary-Encoders" part="ALPS-STEC12E08">
+      <aliases>
+        <alias>BI_EN11-HSM1AF15</alias>
+        <alias>BI_EN12-HS22AF30</alias>
+      </aliases>
+      <description>Rotary encoder with switch</description>
+      <fields>
+        <field name="Reference">ENC</field>
+        <field name="Value">ALPS-STEC12E08</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="B" name="B" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+        <pin num="SW1" name="PB" type="passive"/>
+        <pin num="SW2" name="PB" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="arduino" part="Arduino_Nano_Socket">
+      <description>Socket for Arduino Nano</description>
+      <docs>https://store.arduino.cc/arduino-nano</docs>
+      <footprints>
+        <fp>Arduino_Nano_Socket</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">XA</field>
+        <field name="Value">Arduino_Nano_Socket</field>
+      </fields>
+      <pins>
+        <pin num="5V" name="5V" type="power_in"/>
+        <pin num="3V3" name="3.3V" type="power_in"/>
+        <pin num="A0" name="A0" type="BiDi"/>
+        <pin num="A1" name="A1" type="BiDi"/>
+        <pin num="A2" name="A2" type="BiDi"/>
+        <pin num="A3" name="A3" type="BiDi"/>
+        <pin num="A4" name="A4_SDA" type="BiDi"/>
+        <pin num="A5" name="A5_SCL" type="BiDi"/>
+        <pin num="A6" name="A6" type="input"/>
+        <pin num="A7" name="A7" type="input"/>
+        <pin num="AREF" name="AREF" type="input"/>
+        <pin num="D0" name="D0_RX0" type="BiDi"/>
+        <pin num="D1" name="D1_TX0" type="BiDi"/>
+        <pin num="D2" name="D2_INT0" type="BiDi"/>
+        <pin num="D3" name="D3_INT1" type="BiDi"/>
+        <pin num="D4" name="D4" type="BiDi"/>
+        <pin num="D5" name="D5" type="BiDi"/>
+        <pin num="D6" name="D6" type="BiDi"/>
+        <pin num="D7" name="D7" type="BiDi"/>
+        <pin num="D8" name="D8" type="BiDi"/>
+        <pin num="D9" name="D9" type="BiDi"/>
+        <pin num="D10" name="D10_CS" type="BiDi"/>
+        <pin num="D11" name="D11_MOSI" type="BiDi"/>
+        <pin num="D12" name="D12_MISO" type="BiDi"/>
+        <pin num="D13" name="D13_SCK" type="BiDi"/>
+        <pin num="GND1" name="GND" type="power_in"/>
+        <pin num="GND2" name="GND" type="power_in"/>
+        <pin num="RST1" name="RESET" type="openCol"/>
+        <pin num="RST2" name="RESET" type="openCol"/>
+        <pin num="VIN" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector, single row, 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X03">
+      <description>Connector, single row, 01x03</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="display" part="LCD16X2">
+      <aliases>
+        <alias>LCD-016N002L</alias>
+      </aliases>
+      <description>WC1602A0-SFYLYNC06</description>
+      <docs>http://www.kamami.pl/dl/wc1602a0.pdf</docs>
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">LCD16X2</field>
+        <field name="Footprint">WC1602A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VSS" type="power_in"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="VO" type="input"/>
+        <pin num="4" name="RS" type="input"/>
+        <pin num="5" name="R/W" type="input"/>
+        <pin num="6" name="E" type="input"/>
+        <pin num="7" name="D0" type="input"/>
+        <pin num="8" name="D1" type="input"/>
+        <pin num="9" name="D2" type="input"/>
+        <pin num="10" name="D3" type="input"/>
+        <pin num="11" name="D4" type="input"/>
+        <pin num="12" name="D5" type="input"/>
+        <pin num="13" name="D6" type="input"/>
+        <pin num="14" name="D7" type="input"/>
+        <pin num="15" name="LED+" type="passive"/>
+        <pin num="16" name="LED-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="POT_TRIM">
+      <description>Trim-Potentionmeter</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT_TRIM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Q_NMOS_GDS">
+      <description>Transistor N-MOSFET with substrate diode (general)</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_GDS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="display">
+      <uri>/usr/share/kicad/library/display.lib</uri>
+    </library>
+    <library logical="Rotary-Encoders">
+      <uri>/home/kaustubh/KiCad/github-libs/Rotary-Encoders.pretty/Schematic-Symbols/Rotary-Encoders.lib</uri>
+    </library>
+    <library logical="arduino">
+      <uri>/home/kaustubh/KiCad/github-libs/arduino-kicad-library/arduino.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(XA1-PadD9)">
+      <node ref="XA1" pin="D9"/>
+    </net>
+    <net code="2" name="Net-(XA1-PadD10)">
+      <node ref="XA1" pin="D10"/>
+    </net>
+    <net code="3" name="Net-(XA1-PadD12)">
+      <node ref="XA1" pin="D12"/>
+    </net>
+    <net code="4" name="Net-(XA1-PadD13)">
+      <node ref="XA1" pin="D13"/>
+    </net>
+    <net code="5" name="Net-(ENC1-PadA)">
+      <node ref="XA1" pin="A1"/>
+      <node ref="ENC1" pin="A"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="P2" pin="3"/>
+      <node ref="R1" pin="1"/>
+      <node ref="XA1" pin="GND1"/>
+      <node ref="P1" pin="1"/>
+      <node ref="ENC1" pin="SW2"/>
+      <node ref="P3" pin="2"/>
+      <node ref="RV1" pin="3"/>
+      <node ref="DS1" pin="16"/>
+      <node ref="DS1" pin="1"/>
+      <node ref="DS1" pin="5"/>
+      <node ref="ENC1" pin="C"/>
+    </net>
+    <net code="7" name="Net-(XA1-PadD0)">
+      <node ref="XA1" pin="D0"/>
+    </net>
+    <net code="8" name="Net-(XA1-PadD1)">
+      <node ref="XA1" pin="D1"/>
+    </net>
+    <net code="9" name="Net-(XA1-PadA7)">
+      <node ref="XA1" pin="A7"/>
+    </net>
+    <net code="10" name="Net-(XA1-PadA6)">
+      <node ref="XA1" pin="A6"/>
+    </net>
+    <net code="11" name="Net-(XA1-PadRST2)">
+      <node ref="XA1" pin="RST2"/>
+    </net>
+    <net code="12" name="Net-(DS1-Pad14)">
+      <node ref="DS1" pin="14"/>
+      <node ref="XA1" pin="D2"/>
+    </net>
+    <net code="13" name="Net-(DS1-Pad6)">
+      <node ref="DS1" pin="6"/>
+      <node ref="XA1" pin="D6"/>
+    </net>
+    <net code="14" name="Net-(DS1-Pad7)">
+      <node ref="DS1" pin="7"/>
+    </net>
+    <net code="15" name="Net-(DS1-Pad8)">
+      <node ref="DS1" pin="8"/>
+    </net>
+    <net code="16" name="Net-(DS1-Pad9)">
+      <node ref="DS1" pin="9"/>
+    </net>
+    <net code="17" name="Net-(DS1-Pad10)">
+      <node ref="DS1" pin="10"/>
+    </net>
+    <net code="18" name="Net-(XA1-PadRST1)">
+      <node ref="XA1" pin="RST1"/>
+    </net>
+    <net code="19" name="Net-(XA1-PadA5)">
+      <node ref="XA1" pin="A5"/>
+    </net>
+    <net code="20" name="Net-(P2-Pad2)">
+      <node ref="P2" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="XA1" pin="D8"/>
+    </net>
+    <net code="21" name="+12V">
+      <node ref="P3" pin="1"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="XA1" pin="VIN"/>
+    </net>
+    <net code="22" name="5V">
+      <node ref="DS1" pin="15"/>
+      <node ref="XA1" pin="5V"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="P2" pin="1"/>
+      <node ref="DS1" pin="2"/>
+    </net>
+    <net code="23" name="Net-(ENC1-PadB)">
+      <node ref="XA1" pin="A0"/>
+      <node ref="ENC1" pin="B"/>
+    </net>
+    <net code="24" name="Net-(ENC1-PadSW1)">
+      <node ref="ENC1" pin="SW1"/>
+      <node ref="XA1" pin="A2"/>
+    </net>
+    <net code="25" name="Net-(XA1-PadGND2)">
+      <node ref="XA1" pin="GND2"/>
+    </net>
+    <net code="26" name="Net-(XA1-PadA4)">
+      <node ref="XA1" pin="A4"/>
+    </net>
+    <net code="27" name="Net-(XA1-PadA3)">
+      <node ref="XA1" pin="A3"/>
+    </net>
+    <net code="28" name="Net-(XA1-PadAREF)">
+      <node ref="XA1" pin="AREF"/>
+    </net>
+    <net code="29" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="XA1" pin="D11"/>
+    </net>
+    <net code="30" name="Net-(P1-Pad2)">
+      <node ref="Q1" pin="3"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="31" name="Net-(XA1-Pad3V3)">
+      <node ref="XA1" pin="3V3"/>
+    </net>
+    <net code="33" name="Net-(DS1-Pad4)">
+      <node ref="DS1" pin="4"/>
+      <node ref="XA1" pin="D7"/>
+    </net>
+    <net code="34" name="Net-(DS1-Pad11)">
+      <node ref="DS1" pin="11"/>
+      <node ref="XA1" pin="D5"/>
+    </net>
+    <net code="35" name="Net-(DS1-Pad12)">
+      <node ref="XA1" pin="D4"/>
+      <node ref="DS1" pin="12"/>
+    </net>
+    <net code="36" name="Net-(DS1-Pad13)">
+      <node ref="XA1" pin="D3"/>
+      <node ref="DS1" pin="13"/>
+    </net>
+    <net code="37" name="Net-(DS1-Pad3)">
+      <node ref="RV1" pin="2"/>
+      <node ref="DS1" pin="3"/>
+    </net>
+  </nets>
+</export>

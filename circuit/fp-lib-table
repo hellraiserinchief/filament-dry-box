@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Arduino)(type KiCad)(uri /home/kaustubh/KiCad/github-libs/arduino-kicad-library/Arduino.pretty)(options "")(descr ""))
+)
