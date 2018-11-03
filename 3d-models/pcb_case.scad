@@ -2,11 +2,11 @@ include <MCAD/boxes.scad>
 
 $fn = 50;
 
-pcb_dim = [ 90, 70, 10];
+pcb_dim = [ 90, 70, 1.6];
 hole_size = 2.4;
 
 //height of case bottom
-h = 24;
+h = 26;
 //height of base top
 h_t = 5;
 
@@ -16,7 +16,7 @@ pcb_ht = 10;
 pcb_case_bottom();
 pcb_case_top();
 
-//pcb(10);
+//pcb(0);
 //_pcb_holes(1,10);
 
 module pcb_case_bottom()
@@ -26,7 +26,7 @@ module pcb_case_bottom()
         union()
         {
             _pcb_case_bottom();
-            _pcb_holes(5,pcb_ht);
+            _pcb_holes(3,pcb_ht);
         }
         cube(pcb_dim-[20,20,-10], center = true);
         translate([pcb_dim.x/2-5,0,0]) cylinder(r=3/2, h = 10);
@@ -67,17 +67,18 @@ module _pcb_case_top(ht)
 
 module pcb(ht)
 {
-    translate([-pcb_dim[0]/2, -pcb_dim[1]/2,ht]) 
+    translate([-pcb_dim.x/2, -pcb_dim.y/2,ht]) 
     {
         cube( pcb_dim );
-        translate([pcb_dim.x - 14, 0, ht]) cube([14,19,24]);
+        translate([pcb_dim.x - 14, 0, pcb_dim.z]) cube([14,19,24]);
         for( i = [ 0:4 ] )
-            translate([pcb_dim.x - 14, i*4, ht]) cube([30,2,21]);
+            translate([pcb_dim.x - 14, i*4, pcb_dim.z]) cube([30,2,24]);
+        translate([-10, 10, pcb_dim.z+10]) cube([12,12,11]);
+        translate([57, 14/2, pcb_dim.z]) cylinder(r = 14/2, h = 40);
+        translate([3.5,38, pcb_dim.z]) cube([71.1+2,24+2,30]);
+        translate([pcb_dim.x, 30, pcb_dim.z+10]) rotate([0,90,0]) cylinder(r = 8/2, h = 10);
         
-        translate([-10, 10, ht+10]) cube([12,12,11]);
-        translate([51, 14/2, ht]) cylinder(r = 14/2, h = 40);
-        translate([3.5,38, ht]) cube([71.1+2,24+2,30]);
-        translate([pcb_dim.x, 30, ht]) rotate([0,90,0]) cylinder(r = 8/2, h = 10);
+        
     }    
     
 }
